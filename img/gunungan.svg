@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 500" width="300" height="500">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D97A;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#C8A44D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B6914;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8C95A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7A5A10;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1A00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A0D00;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFE88A;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#C8A44D;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Glow effect behind -->
+  <ellipse cx="150" cy="250" rx="120" ry="200" fill="url(#centerGlow)" />
+
+  <!-- ===== MAIN BODY (Gunungan Shape) ===== -->
+  <!-- Outer silhouette -->
+  <path d="M150 10
+    C150 10 155 20 170 40
+    C190 65 220 95 240 130
+    C260 162 270 190 270 220
+    C270 265 255 295 240 318
+    C225 340 205 355 200 365
+    C215 370 235 378 240 388
+    C245 398 240 408 235 415
+    C220 430 190 440 150 445
+    C110 440 80 430 65 415
+    C60 408 55 398 60 388
+    C65 378 85 370 100 365
+    C95 355 75 340 60 318
+    C45 295 30 265 30 220
+    C30 190 40 162 60 130
+    C80 95 110 65 130 40
+    C145 20 150 10 150 10Z"
+    fill="url(#bodyGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
+
+  <!-- Inner frame line 1 -->
+  <path d="M150 35
+    C155 45 170 65 190 95
+    C210 120 228 148 242 175
+    C253 196 258 215 258 235
+    C258 268 246 294 233 313
+    C222 328 207 340 200 348
+    C215 354 230 362 234 370
+    C238 378 234 386 230 391
+    C218 404 188 412 150 414
+    C112 412 82 404 70 391
+    C66 386 62 378 66 370
+    C70 362 85 354 100 348
+    C93 340 78 328 67 313
+    C54 294 42 268 42 235
+    C42 215 47 196 58 175
+    C72 148 90 120 110 95
+    C130 65 145 45 150 35Z"
+    fill="none" stroke="#C8A44D" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Inner frame line 2 -->
+  <path d="M150 55
+    C157 68 172 90 192 118
+    C210 143 226 168 237 192
+    C246 210 250 228 250 248
+    C250 275 240 298 230 315
+    C220 328 207 338 200 344
+    C210 350 222 357 226 364
+    C229 370 226 378 222 382
+    C213 393 187 400 150 400
+    C113 400 87 393 78 382
+    C74 378 71 370 74 364
+    C78 357 90 350 100 344
+    C93 338 80 328 70 315
+    C60 298 50 275 50 248
+    C50 228 54 210 63 192
+    C74 168 90 143 108 118
+    C128 90 143 68 150 55Z"
+    fill="none" stroke="#C8A44D" stroke-width="1" opacity="0.5"/>
+
+  <!-- ===== DECORATIVE PATTERNS ===== -->
+  <!-- Top flame/crown -->
+  <path d="M150 10 L154 22 L158 15 L160 30 L165 20 L165 38 L170 28 L168 45 L175 35 L171 52 L178 43 L172 60" 
+    fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M150 10 L146 22 L142 15 L140 30 L135 20 L135 38 L130 28 L132 45 L125 35 L129 52 L122 43 L128 60" 
+    fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- ===== CENTER MOTIF - Gapura / Temple Gate ===== -->
+  <g transform="translate(150, 290)">
+    <!-- Base platform -->
+    <rect x="-55" y="30" width="110" height="15" rx="2" fill="url(#goldGrad)"/>
+    <rect x="-50" y="20" width="100" height="12" rx="2" fill="url(#darkGold)"/>
+    <!-- Steps -->
+    <rect x="-40" y="10" width="80" height="10" rx="1" fill="url(#goldGrad)" opacity="0.9"/>
+    <!-- Left pillar -->
+    <rect x="-38" y="-40" width="16" height="50" rx="3" fill="url(#goldGrad)"/>
+    <!-- Right pillar -->
+    <rect x="22" y="-40" width="16" height="50" rx="3" fill="url(#goldGrad)"/>
+    <!-- Roof/Arch top -->
+    <path d="M-45,-40 C-45,-65 -20,-80 0,-82 C20,-80 45,-65 45,-40Z" fill="url(#goldGrad)"/>
+    <!-- Roof layered -->
+    <path d="M-35,-40 C-35,-60 -15,-73 0,-74 C15,-73 35,-60 35,-40Z" fill="url(#darkGold)"/>
+    <!-- Door -->
+    <rect x="-12" y="-38" width="24" height="32" rx="12" fill="url(#bodyGrad)"/>
+    <!-- Door arch -->
+    <path d="M-12,-6 C-12,-18 12,-18 12,-6" fill="#2C1A00" stroke="url(#goldGrad)" stroke-width="1"/>
+    <!-- Ornament on roof peak -->
+    <polygon points="0,-90 -5,-78 5,-78" fill="#F5D97A"/>
+    <circle cx="0" cy="-93" r="4" fill="#F5D97A"/>
+    <!-- Decorative borders on pillars -->
+    <rect x="-38" y="-43" width="16" height="5" rx="1" fill="#F5D97A" opacity="0.7"/>
+    <rect x="22" y="-43" width="16" height="5" rx="1" fill="#F5D97A" opacity="0.7"/>
+  </g>
+
+  <!-- ===== FIRE / FLAMES (left side of body) ===== -->
+  <g opacity="0.85" filter="url(#glow)">
+    <!-- Left flames -->
+    <path d="M75 160 C65 145 55 130 60 115 C58 130 52 140 50 155 C45 140 48 125 52 110 C45 125 40 140 42 158" 
+      fill="none" stroke="#F5D97A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M65 185 C55 170 45 155 50 140 C48 155 42 165 40 180 C35 165 38 150 42 135 C35 150 30 165 32 183" 
+      fill="none" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Right flames -->
+    <path d="M225 160 C235 145 245 130 240 115 C242 130 248 140 250 155 C255 140 252 125 248 110 C255 125 260 140 258 158" 
+      fill="none" stroke="#F5D97A" stroke-width="2" stroke-linecap="round"/>
+    <path d="M235 185 C245 170 255 155 250 140 C252 155 258 165 260 180 C265 165 262 150 258 135 C265 150 270 165 268 183" 
+      fill="none" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== ANIMALS - Tiger left ===== -->
+  <g transform="translate(72, 220)" opacity="0.9">
+    <path d="M-20,0 C-25,-10 -22,-20 -15,-22 C-10,-24 -5,-20 -2,-15 C0,-18 5,-22 10,-20 C16,-18 18,-10 14,-2 C18,2 20,10 16,18 C12,24 4,28 -4,26 C-12,28 -20,24 -22,16 C-25,8 -22,4 -20,0Z"
+      fill="#1A0D00" stroke="#C8A44D" stroke-width="1"/>
+    <!-- Tiger stripes -->
+    <line x1="-10" y1="-5" x2="-6" y2="5" stroke="#C8A44D" stroke-width="0.8"/>
+    <line x1="0" y1="-8" x2="4" y2="2" stroke="#C8A44D" stroke-width="0.8"/>
+    <line x1="8" y1="-5" x2="10" y2="5" stroke="#C8A44D" stroke-width="0.8"/>
+    <!-- Tiger eyes -->
+    <circle cx="-8" cy="-12" r="2" fill="#F5D97A"/>
+    <circle cx="4" cy="-13" r="2" fill="#F5D97A"/>
+    <!-- Tail -->
+    <path d="M16,18 C22,20 28,15 30,8 C32,2 30,-5 25,-8" fill="none" stroke="#C8A44D" stroke-width="1.5"/>
+  </g>
+  <!-- Tiger right (mirror) -->
+  <g transform="translate(228, 220) scale(-1,1)" opacity="0.9">
+    <path d="M-20,0 C-25,-10 -22,-20 -15,-22 C-10,-24 -5,-20 -2,-15 C0,-18 5,-22 10,-20 C16,-18 18,-10 14,-2 C18,2 20,10 16,18 C12,24 4,28 -4,26 C-12,28 -20,24 -22,16 C-25,8 -22,4 -20,0Z"
+      fill="#1A0D00" stroke="#C8A44D" stroke-width="1"/>
+    <line x1="-10" y1="-5" x2="-6" y2="5" stroke="#C8A44D" stroke-width="0.8"/>
+    <line x1="0" y1="-8" x2="4" y2="2" stroke="#C8A44D" stroke-width="0.8"/>
+    <line x1="8" y1="-5" x2="10" y2="5" stroke="#C8A44D" stroke-width="0.8"/>
+    <circle cx="-8" cy="-12" r="2" fill="#F5D97A"/>
+    <circle cx="4" cy="-13" r="2" fill="#F5D97A"/>
+    <path d="M16,18 C22,20 28,15 30,8 C32,2 30,-5 25,-8" fill="none" stroke="#C8A44D" stroke-width="1.5"/>
+  </g>
+
+  <!-- ===== BIRDS (Garuda style) left ===== -->
+  <g transform="translate(80, 155)" opacity="0.9">
+    <!-- Body -->
+    <ellipse cx="0" cy="0" rx="12" ry="8" fill="#1A0D00" stroke="#C8A44D" stroke-width="1"/>
+    <!-- Wings left -->
+    <path d="M-12,0 C-22,-5 -30,-12 -28,-20 C-26,-28 -18,-25 -12,-18 C-16,-25 -12,-32 -5,-30 C0,-28 2,-20 -8,-12 C-2,-8 -12,0 -12,0Z"
+      fill="#2C1A00" stroke="#C8A44D" stroke-width="1"/>
+    <!-- Wing right -->
+    <path d="M12,0 C22,-5 30,-12 28,-20 C26,-28 18,-25 12,-18 C16,-25 12,-32 5,-30 C0,-28 -2,-20 8,-12 C2,-8 12,0 12,0Z"
+      fill="#2C1A00" stroke="#C8A44D" stroke-width="1"/>
+    <!-- Head -->
+    <circle cx="0" cy="-12" r="6" fill="#1A0D00" stroke="#C8A44D" stroke-width="1"/>
+    <!-- Crown/crest -->
+    <path d="M-3,-18 L0,-25 L3,-18" fill="#F5D97A" stroke="#F5D97A" stroke-width="0.5"/>
+    <!-- Beak -->
+    <path d="M0,-10 L4,-8 L0,-6" fill="#C8A44D"/>
+    <!-- Eye -->
+    <circle cx="-2" cy="-13" r="1.5" fill="#F5D97A"/>
+    <!-- Tail feathers -->
+    <path d="M-8,8 L-12,18 L-6,14 L-4,22 L0,15 L4,22 L6,14 L12,18 L8,8"
+      fill="#2C1A00" stroke="#C8A44D" stroke-width="0.8"/>
+  </g>
+  <!-- Bird right (mirror) -->
+  <g transform="translate(220, 155) scale(-1,1)" opacity="0.9">
+    <ellipse cx="0" cy="0" rx="12" ry="8" fill="#1A0D00" stroke="#C8A44D" stroke-width="1"/>
+    <path d="M-12,0 C-22,-5 -30,-12 -28,-20 C-26,-28 -18,-25 -12,-18 C-16,-25 -12,-32 -5,-30 C0,-28 2,-20 -8,-12 C-2,-8 -12,0 -12,0Z"
+      fill="#2C1A00" stroke="#C8A44D" stroke-width="1"/>
+    <path d="M12,0 C22,-5 30,-12 28,-20 C26,-28 18,-25 12,-18 C16,-25 12,-32 5,-30 C0,-28 -2,-20 8,-12 C2,-8 12,0 12,0Z"
+      fill="#2C1A00" stroke="#C8A44D" stroke-width="1"/>
+    <circle cx="0" cy="-12" r="6" fill="#1A0D00" stroke="#C8A44D" stroke-width="1"/>
+    <path d="M-3,-18 L0,-25 L3,-18" fill="#F5D97A" stroke="#F5D97A" stroke-width="0.5"/>
+    <path d="M0,-10 L4,-8 L0,-6" fill="#C8A44D"/>
+    <circle cx="-2" cy="-13" r="1.5" fill="#F5D97A"/>
+    <path d="M-8,8 L-12,18 L-6,14 L-4,22 L0,15 L4,22 L6,14 L12,18 L8,8"
+      fill="#2C1A00" stroke="#C8A44D" stroke-width="0.8"/>
+  </g>
+
+  <!-- ===== BATIK PATTERN DETAILS (center upper area) ===== -->
+  <!-- Lotus / flower center motif -->
+  <g transform="translate(150,160)">
+    <circle cx="0" cy="0" r="18" fill="#1A0D00" stroke="#C8A44D" stroke-width="1.5"/>
+    <!-- Petals -->
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(0,0,0)"/>
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(45,0,0)"/>
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(90,0,0)"/>
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(135,0,0)"/>
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(180,0,0)"/>
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(225,0,0)"/>
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(270,0,0)"/>
+    <ellipse cx="0" cy="-24" rx="6" ry="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1" transform="rotate(315,0,0)"/>
+    <!-- Center dot -->
+    <circle cx="0" cy="0" r="8" fill="url(#goldGrad)"/>
+    <circle cx="0" cy="0" r="4" fill="#1A0D00"/>
+    <circle cx="0" cy="0" r="2" fill="#F5D97A"/>
+  </g>
+
+  <!-- Decorative swirl scrollwork left -->
+  <path d="M90,110 C80,105 75,95 80,85 C85,75 95,75 100,82 C105,88 102,98 95,100" 
+    fill="none" stroke="#C8A44D" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M88,112 C75,112 68,102 72,92 C76,82 88,80 95,88" 
+    fill="none" stroke="#C8A44D" stroke-width="0.8" stroke-linecap="round"/>
+
+  <!-- Decorative swirl scrollwork right -->
+  <path d="M210,110 C220,105 225,95 220,85 C215,75 205,75 200,82 C195,88 198,98 205,100" 
+    fill="none" stroke="#C8A44D" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M212,112 C225,112 232,102 228,92 C224,82 212,80 205,88" 
+    fill="none" stroke="#C8A44D" stroke-width="0.8" stroke-linecap="round"/>
+
+  <!-- Decorative horizontal bands -->
+  <path d="M80,260 Q150,252 220,260" fill="none" stroke="#C8A44D" stroke-width="1" opacity="0.6"/>
+  <path d="M78,263 Q150,255 222,263" fill="none" stroke="#F5D97A" stroke-width="0.5" opacity="0.4"/>
+  <path d="M82,257 Q150,249 218,257" fill="none" stroke="#F5D97A" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Bottom ornament dots -->
+  <g transform="translate(150,420)" opacity="0.8">
+    <circle cx="-20" cy="0" r="3" fill="#C8A44D"/>
+    <circle cx="0" cy="0" r="4" fill="#F5D97A"/>
+    <circle cx="20" cy="0" r="3" fill="#C8A44D"/>
+    <circle cx="-10" cy="-6" r="2" fill="#C8A44D"/>
+    <circle cx="10" cy="-6" r="2" fill="#C8A44D"/>
+  </g>
+
+  <!-- Stick / gapit at bottom -->
+  <rect x="146" y="440" width="8" height="55" rx="4" fill="url(#goldGrad)"/>
+  <rect x="143" y="488" width="14" height="6" rx="3" fill="#F5D97A"/>
+  <rect x="140" y="494" width="20" height="4" rx="2" fill="#C8A44D"/>
+
+</svg>

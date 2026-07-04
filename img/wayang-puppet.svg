@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 520" width="200" height="520">
+  <defs>
+    <linearGradient id="goldG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5D97A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C8A44D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B6914;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C1A00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#100800;stop-opacity:1" />
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ==== MAHKOTA / CROWN ==== -->
+  <g transform="translate(100, 30)">
+    <!-- Center spike -->
+    <polygon points="0,-30 -5,-10 5,-10" fill="#F5D97A" filter="url(#softGlow)"/>
+    <circle cx="0" cy="-32" r="5" fill="#F5D97A"/>
+    <!-- Left spikes -->
+    <polygon points="-18,-20 -22,-5 -12,-5" fill="#C8A44D"/>
+    <circle cx="-20" cy="-22" r="4" fill="#C8A44D"/>
+    <polygon points="-36,-10 -40,3 -30,3" fill="#8B6914"/>
+    <!-- Right spikes -->
+    <polygon points="18,-20 22,-5 12,-5" fill="#C8A44D"/>
+    <circle cx="20" cy="-22" r="4" fill="#C8A44D"/>
+    <polygon points="36,-10 40,3 30,3" fill="#8B6914"/>
+    <!-- Crown base -->
+    <rect x="-45" y="0" width="90" height="20" rx="5" fill="url(#goldG)"/>
+    <!-- Jewel ornaments -->
+    <circle cx="-30" cy="10" r="5" fill="#1A0D00" stroke="#F5D97A" stroke-width="1"/>
+    <circle cx="0" cy="10" r="6" fill="#1A0D00" stroke="#F5D97A" stroke-width="1.5"/>
+    <circle cx="30" cy="10" r="5" fill="#1A0D00" stroke="#F5D97A" stroke-width="1"/>
+    <circle cx="0" cy="10" r="3" fill="#F5D97A"/>
+  </g>
+
+  <!-- ==== FACE ==== -->
+  <g transform="translate(100, 100)">
+    <!-- Head shape - stylized wayang -->
+    <path d="M0,-50 C-35,-50 -55,-30 -55,0 C-55,25 -45,45 -30,55 C-20,62 -10,68 0,70 C10,68 20,62 30,55 C45,45 55,25 55,0 C55,-30 35,-50 0,-50Z"
+      fill="url(#darkBg)" stroke="#C8A44D" stroke-width="1.5"/>
+
+    <!-- Nose ridge (wayang profile) -->
+    <path d="M0,-35 C5,-25 8,-15 10,-5 C12,5 10,15 5,20" 
+      fill="none" stroke="#C8A44D" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Eye left -->
+    <g transform="translate(-22,-15)">
+      <ellipse cx="0" cy="0" rx="14" ry="6" fill="#1A0D00" stroke="#C8A44D" stroke-width="1"/>
+      <ellipse cx="0" cy="0" rx="9" ry="4" fill="#2C1A00"/>
+      <!-- Pupil -->
+      <ellipse cx="0" cy="0" rx="4" ry="3" fill="#F5D97A"/>
+      <circle cx="0" cy="0" r="2" fill="#1A0D00"/>
+      <!-- Eyelash lines -->
+      <path d="M-14,0 L-20,-4 M-10,-6 L-15,-10 M-4,-6 L-6,-12" stroke="#C8A44D" stroke-width="0.8"/>
+    </g>
+
+    <!-- Brow left -->
+    <path d="M-38,-28 C-30,-35 -18,-33 -10,-28" fill="none" stroke="#C8A44D" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Mustache/beard (priyayi style) -->
+    <path d="M-20,35 C-10,28 10,28 20,35" fill="none" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M-25,40 C-15,32 15,32 25,40" fill="none" stroke="#8B6914" stroke-width="1" stroke-linecap="round"/>
+
+    <!-- Ear ornament right -->
+    <g transform="translate(55,5)">
+      <circle cx="0" cy="0" r="10" fill="#2C1A00" stroke="#C8A44D" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="6" fill="#C8A44D"/>
+      <circle cx="0" cy="0" r="3" fill="#1A0D00"/>
+    </g>
+
+    <!-- Lips -->
+    <path d="M-12,55 C-6,50 6,50 12,55 C6,60 -6,60 -12,55Z" fill="#C8A44D"/>
+    <path d="M-12,55 C-6,52 6,52 12,55" fill="none" stroke="#F5D97A" stroke-width="0.8"/>
+
+    <!-- Facial decoration lines (wayang style) -->
+    <path d="M-55,0 C-60,0 -65,-5 -68,0 C-65,5 -60,10 -55,10" 
+      fill="none" stroke="#C8A44D" stroke-width="1" stroke-linecap="round"/>
+    <!-- Decorative cheek line -->
+    <path d="M-45,20 C-50,15 -52,10 -50,5" fill="none" stroke="#C8A44D" stroke-width="0.8"/>
+  </g>
+
+  <!-- ==== NECK & COLLAR ==== -->
+  <g transform="translate(100, 195)">
+    <rect x="-20" y="0" width="40" height="25" fill="url(#darkBg)"/>
+    <!-- Collar necklace -->
+    <path d="M-55,20 C-40,10 40,10 55,20 L45,35 C30,28 -30,28 -45,35Z" fill="url(#darkBg)" stroke="#C8A44D" stroke-width="1.5"/>
+    <path d="M-50,20 Q0,12 50,20" fill="none" stroke="#F5D97A" stroke-width="1"/>
+    <!-- Gems on necklace -->
+    <circle cx="-30" cy="22" r="4" fill="#C8A44D"/>
+    <circle cx="-15" cy="19" r="3" fill="#F5D97A"/>
+    <circle cx="0" cy="18" r="5" fill="#C8A44D" stroke="#F5D97A" stroke-width="1"/>
+    <circle cx="15" cy="19" r="3" fill="#F5D97A"/>
+    <circle cx="30" cy="22" r="4" fill="#C8A44D"/>
+    <circle cx="0" cy="18" r="2" fill="#F5D97A"/>
+  </g>
+
+  <!-- ==== BODY / COSTUME ==== -->
+  <g transform="translate(100, 235)">
+    <!-- Main body -->
+    <path d="M-55,0 C-65,20 -70,60 -65,100 C-60,130 -45,150 -30,165 C-15,178 0,182 0,182 C0,182 15,178 30,165 C45,150 60,130 65,100 C70,60 65,20 55,0Z"
+      fill="url(#darkBg)" stroke="#C8A44D" stroke-width="1.5"/>
+
+    <!-- Arms -->
+    <!-- Left arm -->
+    <path d="M-55,10 C-75,20 -95,40 -105,65 C-115,88 -110,110 -98,120 C-88,128 -75,125 -70,115" 
+      fill="none" stroke="#C8A44D" stroke-width="8" stroke-linecap="round"/>
+    <path d="M-55,10 C-75,20 -95,40 -105,65 C-115,88 -110,110 -98,120 C-88,128 -75,125 -70,115" 
+      fill="none" stroke="#2C1A00" stroke-width="6" stroke-linecap="round"/>
+    <!-- Left hand -->
+    <g transform="translate(-72,115)">
+      <ellipse cx="0" cy="0" rx="10" ry="7" fill="url(#darkBg)" stroke="#C8A44D" stroke-width="1"/>
+      <path d="M-10,0 L-18,-5" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M-8,-5 L-15,-12" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M-3,-7 L-8,-14" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M3,-6 L5,-13" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Right arm (angled up - holding something) -->
+    <path d="M55,10 C75,0 95,5 110,20 C122,33 125,55 115,72 C108,83 95,88 85,82" 
+      fill="none" stroke="#C8A44D" stroke-width="8" stroke-linecap="round"/>
+    <path d="M55,10 C75,0 95,5 110,20 C122,33 125,55 115,72 C108,83 95,88 85,82" 
+      fill="none" stroke="#2C1A00" stroke-width="6" stroke-linecap="round"/>
+    <!-- Right hand -->
+    <g transform="translate(85,80)">
+      <ellipse cx="0" cy="0" rx="10" ry="7" fill="url(#darkBg)" stroke="#C8A44D" stroke-width="1"/>
+      <path d="M10,0 L18,-5" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M8,-5 L15,-12" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M3,-7 L8,-14" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M-3,-6 L-5,-13" stroke="#C8A44D" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Batik body pattern -->
+    <path d="M-30,30 Q0,20 30,30 Q0,40 -30,30Z" fill="#C8A44D" opacity="0.3"/>
+    <path d="M-35,55 Q0,45 35,55 Q0,65 -35,55Z" fill="#C8A44D" opacity="0.2"/>
+    <path d="M-38,80 Q0,70 38,80 Q0,90 -38,80Z" fill="#C8A44D" opacity="0.2"/>
+
+    <!-- Center medallion -->
+    <circle cx="0" cy="50" r="18" fill="#1A0D00" stroke="#C8A44D" stroke-width="1.5"/>
+    <path d="M0,32 L4,43 L16,43 L7,50 L10,62 L0,55 L-10,62 L-7,50 L-16,43 L-4,43Z" fill="#C8A44D"/>
+    <circle cx="0" cy="50" r="7" fill="#1A0D00"/>
+    <circle cx="0" cy="50" r="4" fill="#F5D97A"/>
+
+    <!-- Waist belt -->
+    <rect x="-55" y="100" width="110" height="12" rx="6" fill="url(#goldG)"/>
+    <circle cx="0" cy="106" r="6" fill="#1A0D00" stroke="#F5D97A" stroke-width="1"/>
+    <circle cx="0" cy="106" r="3" fill="#F5D97A"/>
+  </g>
+
+  <!-- ==== LOWER BODY / SKIRT ==== -->
+  <g transform="translate(100, 345)">
+    <!-- Sarong -->
+    <path d="M-55,0 C-60,30 -58,70 -50,105 C-42,135 -28,155 -10,165 L0,168 L10,165 C28,155 42,135 50,105 C58,70 60,30 55,0Z"
+      fill="url(#darkBg)" stroke="#C8A44D" stroke-width="1.5"/>
+
+    <!-- Batik skirt lines -->
+    <path d="M-52,20 Q0,12 52,20" fill="none" stroke="#C8A44D" stroke-width="0.8" opacity="0.6"/>
+    <path d="M-54,40 Q0,32 54,40" fill="none" stroke="#C8A44D" stroke-width="0.8" opacity="0.6"/>
+    <path d="M-54,60 Q0,52 54,60" fill="none" stroke="#C8A44D" stroke-width="0.8" opacity="0.6"/>
+    <path d="M-52,80 Q0,72 52,80" fill="none" stroke="#C8A44D" stroke-width="0.8" opacity="0.6"/>
+    <path d="M-48,100 Q0,92 48,100" fill="none" stroke="#C8A44D" stroke-width="0.8" opacity="0.6"/>
+    <path d="M-40,120 Q0,112 40,120" fill="none" stroke="#C8A44D" stroke-width="0.8" opacity="0.6"/>
+    <path d="M-28,142 Q0,134 28,142" fill="none" stroke="#C8A44D" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Wayang decorative bottom fringe -->
+    <path d="M-50,105 C-45,120 -38,140 -30,158 M-30,108 C-26,123 -20,143 -14,160 M-8,110 C-5,125 -2,145 0,162 M8,110 C5,125 2,145 0,162 M30,108 C26,123 20,143 14,160 M50,105 C45,120 38,140 30,158"
+      fill="none" stroke="#C8A44D" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- ==== STICK / GAPIT ==== -->
+  <rect x="96" y="490" width="8" height="30" rx="4" fill="url(#goldG)"/>
+  <rect x="93" y="516" width="14" height="4" rx="2" fill="#F5D97A"/>
+
+</svg>
