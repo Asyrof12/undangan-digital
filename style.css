@@ -1,0 +1,337 @@
+/* Javanese Aurora Light Design System */
+:root {
+    /* Colors */
+    --gold: #C8A44D;
+    --gold-light: #E5C782;
+    --gold-dark: #A68036;
+    --ivory: #FFF8EF;
+    --cream: #F5E6CC;
+    --dark-brown: #4E342E;
+    --black: #0F0F0F;
+    --maroon: #800000;
+    --emerald: #043927;
+    --white-gading: #FAF9F6;
+    --jasmine: #FFFFFF; /* Melati */
+    
+    /* Gradients */
+    --grad-gold: linear-gradient(135deg, #C8A44D, #E5C782, #C8A44D);
+    --grad-aurora: linear-gradient(270deg, #4E342E, #800000, #043927, #4E342E);
+    
+    /* Fonts */
+    --font-title: 'Great Vibes', cursive;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Poppins', sans-serif;
+    --font-body: 'Lora', serif;
+    
+    /* Shadows & Effects */
+    --glass: rgba(255, 248, 239, 0.1);
+    --glass-border: rgba(200, 164, 77, 0.3);
+    --glow: 0 0 20px rgba(200, 164, 77, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--white-gading);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--gold);
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding: 100px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Base Texture */
+.bg-texture {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: url('https://www.transparenttextures.com/patterns/dark-wood.png'), var(--black);
+    opacity: 0.8;
+}
+
+.bg-batik {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://img.freepik.com/free-vector/indonesian-batik-pattern-design-background_52683-42674.jpg?t=st=1720847000~exp=1720850600~hmac=...placeholder...'); /* I will replace this with a better asset or generated one */
+    background-size: cover;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* Aurora Light Animation */
+.aurora-bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    background: var(--grad-aurora);
+    background-size: 400% 400%;
+    animation: aurora-move 15s ease infinite;
+    filter: blur(80px);
+    opacity: 0.2;
+}
+
+@keyframes aurora-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism */
+.glass {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.glass::before {
+    content: '';
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    background: linear-gradient(45deg, transparent, var(--gold), transparent, var(--gold), transparent);
+    background-size: 400% 400%;
+    z-index: -1;
+    border-radius: 22px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    animation: border-glow 5s linear infinite;
+}
+
+.glass:hover::before {
+    opacity: 0.5;
+}
+
+@keyframes border-glow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Golden Buttons */
+.btn-gold {
+    padding: 15px 35px;
+    background: var(--grad-gold);
+    color: var(--black);
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--glow);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-gold:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(200, 164, 77, 0.6);
+}
+
+/* Gunungan Styles */
+#opening-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--black);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gunungan-curtain {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: var(--dark-brown);
+    z-index: 1;
+    transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.curtain-left { left: 0; border-right: 2px solid var(--gold); }
+.curtain-right { right: 0; border-left: 2px solid var(--gold); }
+
+.gunungan-img {
+    width: 300px;
+    z-index: 2;
+    filter: drop-shadow(var(--glow));
+}
+
+/* Text Reveal */
+.reveal-text {
+    overflow: hidden;
+    display: inline-block;
+}
+.reveal-text span {
+    display: inline-block;
+}
+
+/* Ripple Button Effect */
+.ripple {
+    position: absolute;
+    background: white;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate-ripple 1s linear infinite;
+}
+@keyframes animate-ripple {
+    0% { width: 0px; height: 0px; opacity: 0.5; }
+    100% { width: 500px; height: 500px; opacity: 0; }
+}
+
+/* Section Title Style */
+.section-title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 10px auto;
+}
+
+/* Wayang Decorations */
+.wayang-side {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 400px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/36/Gunungan_Wayang.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 1;
+}
+.side-left { left: 20px; }
+.side-right { right: 20px; transform: translateY(-50%) scaleX(-1); }
+
+/* Navigation links */
+.nav-link {
+    color: var(--gold);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+.nav-link:hover {
+    color: var(--white-gading);
+    transform: scale(1.2);
+    text-shadow: var(--glow);
+}
+
+/* Story Styles */
+.story-item:nth-child(even) .story-content {
+    margin-left: auto;
+}
+
+/* Footer Quotes */
+.quote h2 {
+    line-height: 1.8;
+}
+
+/* Gapura Border Style */
+.gapura-border {
+    position: relative;
+    border: 15px solid transparent;
+    border-image: url('https://upload.wikimedia.org/wikipedia/commons/3/36/Gunungan_Wayang.svg') 30 round; /* Placeholder for gapura pattern */
+    padding: 40px;
+}
+
+/* Flower Ornaments (Melati/Kenanga) */
+.flower-deco {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23C8A44D"><path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" /></svg>');
+    background-size: contain;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0.6;
+}
+.flower-top-left { top: -30px; left: -30px; }
+.flower-bottom-right { bottom: -30px; right: -30px; }
+
+/* Scroll style for Love Story */
+.naskah-scroll {
+    background: #fdf2d9;
+    color: var(--dark-brown);
+    padding: 60px 40px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.1), 0 10px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+.naskah-scroll::before, .naskah-scroll::after {
+    content: '';
+    position: absolute;
+    width: 104%;
+    height: 40px;
+    background: #e6d5b8;
+    left: -2%;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.naskah-scroll::before { top: -20px; }
+.naskah-scroll::after { bottom: -20px; }
+
+/* Flip Animation for Countdown */
+.time-box {
+    perspective: 1000px;
+}
+.flip-num {
+    display: inline-block;
+    animation: flip-v 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+@keyframes flip-v {
+    0% { transform: rotateX(0deg); }
+    100% { transform: rotateX(360deg); }
+}
+
+/* Responsive Customizations */
+@media (max-width: 768px) {
+    .gapura-border { padding: 20px; border-width: 8px; }
+    .naskah-scroll { padding: 40px 20px; }
+}

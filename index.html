@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Javanese Aurora Luxury</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Layers -->
+    <div class="bg-texture"></div>
+    <div class="bg-batik" id="batik-overlay"></div>
+    <div class="aurora-bg"></div>
+    <div id="particles-js" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_c8c8a1e8e8.mp3" type="audio/mpeg">
+        <!-- Replace with Javanese Gamelan if possible -->
+    </audio>
+
+    <!-- 1. Opening Screen (Gunungan Reveal) -->
+    <div id="opening-screen">
+        <div class="gunungan-curtain curtain-left"></div>
+        <div class="gunungan-curtain curtain-right"></div>
+        
+        <div class="opening-content" style="z-index: 10; text-align: center;">
+            <div class="gunungan-wrapper" style="margin-bottom: 2rem;">
+                <!-- Gunungan Placeholder (Simplified SVG) -->
+                <svg class="gunungan-img" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 10L190 290H10L100 10Z" fill="#C8A44D" fill-opacity="0.2" stroke="#C8A44D" stroke-width="2"/>
+                    <path d="M100 40L170 270H30L100 40Z" stroke="#C8A44D" stroke-width="1"/>
+                    <circle cx="100" cy="180" r="40" stroke="#C8A44D" stroke-width="1"/>
+                    <rect x="95" y="10" width="10" height="280" fill="#C8A44D"/>
+                </svg>
+            </div>
+            <h2 class="reveal-text" style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--ivory);">The Wedding of</h2>
+            <h1 class="reveal-text" style="font-size: 4rem; margin-bottom: 2rem;">Arif & Shinta</h1>
+            <button class="btn-gold" id="btn-open">Buka Undangan</button>
+        </div>
+    </div>
+
+    <!-- 2. Navigation -->
+    <nav class="glass" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 100; display: flex; gap: 1rem; padding: 10px 25px; visibility: hidden; opacity: 0;" id="main-nav">
+        <a href="#hero" class="nav-link" title="Home"><i class="fas fa-home"></i></a>
+        <a href="#mempelai" class="nav-link" title="Mempelai"><i class="fas fa-heart"></i></a>
+        <a href="#story" class="nav-link" title="Story"><i class="fas fa-book-open"></i></a>
+        <a href="#acara" class="nav-link" title="Acara"><i class="fas fa-calendar-alt"></i></a>
+        <a href="#galeri" class="nav-link" title="Galeri"><i class="fas fa-images"></i></a>
+        <a href="#rsvp" class="nav-link" title="RSVP"><i class="fas fa-envelope-open-text"></i></a>
+        <a href="#gift" class="nav-link" title="Gift"><i class="fas fa-gift"></i></a>
+        <a href="#ucapan" class="nav-link" title="Ucapan"><i class="fas fa-comment-dots"></i></a>
+    </nav>
+
+    <main id="main-content">
+        <!-- 3. Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="wayang-side side-left"></div>
+            <div class="wayang-side side-right"></div>
+            
+            <div class="hero-content glass" style="padding: 3rem; text-align: center; border-radius: 50% 50% 0 0;">
+                <div class="couple-frame">
+                    <img id="couple-photo" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=600" alt="Arif & Shinta" style="width: 250px; height: 350px; object-fit: cover; border: 5px solid var(--gold); border-radius: 125px 125px 0 0;">
+                </div>
+                <h1 style="font-size: 5rem; margin-top: 1rem;">Arif & Shinta</h1>
+                <p class="date-text" style="font-family: var(--font-serif); font-size: 1.5rem; letter-spacing: 5px;">12 . 12 . 2026</p>
+            </div>
+        </section>
+
+        <!-- 4. Mempelai Section -->
+        <section id="mempelai">
+            <div class="flower-deco flower-top-left"></div>
+            <h2 class="section-title">Mempelai</h2>
+            <div class="mempelai-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; width: 100%; max-width: 1000px;">
+                <!-- Groom -->
+                <div class="mempelai-card glass gapura-border" style="padding: 2rem; text-align: center;">
+                    <div class="frame-gold" style="padding: 10px; border: 2px solid var(--gold); margin-bottom: 2rem;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="Groom" style="width: 100%; height: 400px; object-fit: cover;">
+                    </div>
+                    <h3>Raden Arif Kusuma</h3>
+                    <p>Putra dari Bapak Sujiwo & Ibu Kartini</p>
+                    <div class="socmed" style="margin-top: 1rem;">
+                        <i class="fab fa-instagram"></i> @arif_kusuma
+                    </div>
+                </div>
+                <!-- Bride -->
+                <div class="mempelai-card glass gapura-border" style="padding: 2rem; text-align: center;">
+                    <div class="frame-gold" style="padding: 10px; border: 2px solid var(--gold); margin-bottom: 2rem;">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=300" alt="Bride" style="width: 100%; height: 400px; object-fit: cover;">
+                    </div>
+                    <h3>Roro Shinta Dewi</h3>
+                    <p>Putri dari Bapak Hamengku & Ibu Saraswati</p>
+                    <div class="socmed" style="margin-top: 1rem;">
+                        <i class="fab fa-instagram"></i> @shintadewi
+                    </div>
+                </div>
+            </div>
+            <div class="flower-deco flower-bottom-right"></div>
+        </section>
+
+        <!-- 5. Countdown Section -->
+        <section id="countdown" class="glass" style="margin: 50px auto; max-width: 800px; border-radius: 0;">
+            <h3 style="margin-bottom: 2rem;">Menghitung Hari</h3>
+            <div class="timer" style="display: flex; gap: 2rem; font-size: 2rem;">
+                <div class="time-box"><span id="days">00</span><p style="font-size: 1rem;">Hari</p></div>
+                <div class="time-box"><span id="hours">00</span><p style="font-size: 1rem;">Jam</p></div>
+                <div class="time-box"><span id="minutes">00</span><p style="font-size: 1rem;">Menit</p></div>
+                <div class="time-box"><span id="seconds">00</span><p style="font-size: 1rem;">Detik</p></div>
+            </div>
+        </section>
+
+        <!-- 6. Love Story -->
+        <section id="story">
+            <h2 class="section-title">Kisah Cinta</h2>
+            <div class="timeline" style="position: relative; max-width: 800px; width: 100%;">
+                <div class="timeline-line" style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--gold);"></div>
+                
+                <div class="story-item" style="margin-bottom: 4rem; position: relative;">
+                    <div class="story-content naskah-scroll" style="width: 45%; padding: 1.5rem;">
+                        <i class="fas fa-sun" style="color: var(--gold); margin-bottom: 1rem;"></i>
+                        <span class="gold-text" style="display: block; font-weight: bold;">Januari 2024</span>
+                        <h4>Pertemuan Pertama</h4>
+                        <p>Takdir mempertemukan kami di sebuah pelataran Keraton Yogyakarta saat senja menyapa...</p>
+                    </div>
+                </div>
+                
+                <div class="story-item" style="margin-bottom: 4rem; position: relative;">
+                    <div class="story-content naskah-scroll" style="width: 45%; padding: 1.5rem;">
+                        <i class="fas fa-heart" style="color: var(--gold); margin-bottom: 1rem;"></i>
+                        <span class="gold-text" style="display: block; font-weight: bold;">Mei 2024</span>
+                        <h4>Menjalin Ikatan</h4>
+                        <p>Dua hati yang berbeda arah, kini melangkah bersatu dalam janji suci...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Gallery -->
+        <section id="galeri">
+            <h2 class="section-title">Galeri Bahagia</h2>
+            <div class="masonry-gallery" style="columns: 3 300px; gap: 1rem; width: 100%;">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=400" alt="Gallery 1" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--gold);">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=400" alt="Gallery 2" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--gold);">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=400" alt="Gallery 3" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--gold);">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=400" alt="Gallery 4" style="width: 100%; margin-bottom: 1rem; border: 1px solid var(--gold);">
+            </div>
+        </section>
+
+        <!-- 8. Lokasi & RSVP -->
+        <section id="acara">
+            <div class="acara-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; width: 100%;">
+                <div class="event-card glass" style="padding: 3rem; text-align: center; border: 2px solid var(--gold);">
+                    <h3>Akad Nikah</h3>
+                    <p><i class="far fa-calendar"></i> Sabtu, 12 Desember 2026</p>
+                    <p><i class="far fa-clock"></i> 09.00 - 11.00 WIB</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Masjid Agung Yogyakarta</p>
+                </div>
+                <div class="event-card glass" style="padding: 3rem; text-align: center; background: rgba(200, 164, 77, 0.1);">
+                    <h3>Resepsi</h3>
+                    <p><i class="far fa-calendar"></i> Sabtu, 12 Desember 2026</p>
+                    <p><i class="far fa-clock"></i> 13.00 - Selesai</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Ndalem Ageng Keraton</p>
+                </div>
+            </div>
+            
+            <div class="map-container glass" style="width: 100%; margin-top: 4rem; padding: 10px; height: 400px;">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15811.23456789!2d110.363!3d-7.801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDgnMDMuNiJTIDExMMKwMjEnNDYuOCJF!5e0!3m2!1sen!2sid!4v1620000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                 <button class="btn-gold" style="margin-top: 1rem; width: 100%;">Lihat di Google Maps</button>
+            </div>
+        </section>
+
+        <!-- 9. Gift & RSVP -->
+        <section id="gift">
+            <h2 class="section-title">Kado Digital</h2>
+            <div class="gift-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; width: 100%; max-width: 800px;">
+                <div class="gift-card glass gapura-border" style="padding: 2rem; text-align: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA" style="height: 40px; margin-bottom: 1.5rem;">
+                    <p>No. Rekening:</p>
+                    <h3 id="norek-1">1234567890</h3>
+                    <p>a.n Raden Arif Kusuma</p>
+                    <button class="btn-gold btn-copy" data-target="norek-1" style="margin-top: 1rem; width: 100%;">Salin No. Rekening</button>
+                </div>
+                <div class="gift-card glass gapura-border" style="padding: 2rem; text-align: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_Bank_Mandiri.svg" alt="Mandiri" style="height: 40px; margin-bottom: 1.5rem;">
+                    <p>No. Rekening:</p>
+                    <h3 id="norek-2">0987654321</h3>
+                    <p>a.n Roro Shinta Dewi</p>
+                    <button class="btn-gold btn-copy" data-target="norek-2" style="margin-top: 1rem; width: 100%;">Salin No. Rekening</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. RSVP Section -->
+        <section id="rsvp">
+             <div class="rsvp-form glass gapura-border" style="width: 100%; max-width: 600px; padding: 3rem;">
+                <h2 style="margin-bottom: 2rem; text-align: center;">Konfirmasi Kehadiran</h2>
+                <form id="wedding-rsvp">
+                    <div style="margin-bottom: 1.5rem;">
+                        <input type="text" placeholder="Nama Lengkap" required style="width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--gold); color: white; border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <select style="width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--gold); color: white; border-radius: 5px;">
+                            <option value="hadir">Akan Hadir</option>
+                            <option value="ragu">Masih Ragu</option>
+                            <option value="tidak">Tidak Hadir</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <input type="number" placeholder="Jumlah Tamu" min="1" max="5" style="width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid var(--gold); color: white; border-radius: 5px;">
+                    </div>
+                    <button type="submit" class="btn-gold" style="width: 100%;">Kirim RSVP</button>
+                </form>
+             </div>
+        </section>
+
+        <!-- 11. Ucapan Section -->
+        <section id="ucapan">
+            <h2 class="section-title">Ucapan & Doa</h2>
+            <div class="ucapan-container glass naskah-scroll" style="width: 100%; max-width: 700px; max-height: 500px; overflow-y: auto;">
+                <div class="ucapan-item" style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <strong>Ahmad Subarjo</strong>
+                    <p style="font-size: 0.9rem; font-style: italic;">"Selamat menempuh hidup baru Mas Arif dan Mbak Shinta. Mugi dadi keluarga sakinah mawaddah warahmah."</p>
+                </div>
+                <div class="ucapan-item" style="margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.1);">
+                    <strong>Siti Aminah</strong>
+                    <p style="font-size: 0.9rem; font-style: italic;">"Baris doa terbaik untuk kalian berdua. Semoga lancar acaranya sampai hari H!"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Footer -->
+        <footer style="padding: 100px 5% 150px; text-align: center; border-top: 1px solid var(--gold);">
+            <div class="quote" style="margin-bottom: 3rem;">
+                <h2 style="font-family: var(--font-body); font-style: italic; font-size: 1.5rem; color: var(--ivory);">
+                    "Saklawase tresna, mugi tansah pinaringan rahayu lan kabegjan."
+                </h2>
+                <p style="margin-top: 1rem; font-family: var(--font-serif);">Selamanya cinta, semoga selalu dianugerahi keselamatan dan kebahagiaan.</p>
+            </div>
+            <p>Terima Kasih</p>
+            <h1 style="font-size: 3rem;">Arif & Shinta</h1>
+            <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.5;">© 2026 Crafted with ❤️ for Arif & Shinta</p>
+        </footer>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
